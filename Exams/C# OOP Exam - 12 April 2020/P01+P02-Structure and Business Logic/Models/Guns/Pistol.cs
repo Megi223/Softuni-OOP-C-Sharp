@@ -1,0 +1,24 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace CounterStrike.Models.Guns
+{
+    public class Pistol : Gun
+    {
+        public Pistol(string name, int bulletsCount) : base(name, bulletsCount)
+        {
+        }
+
+        //TODO:Check this method
+        public override int Fire()
+        {
+            if (this.BulletsCount == 0)
+            {
+                return 0;
+            }
+            this.BulletsCount--;
+            return 1;
+        }
+    }
+}
